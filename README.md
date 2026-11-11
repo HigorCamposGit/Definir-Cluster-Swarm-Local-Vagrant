@@ -106,6 +106,16 @@ Para redimensionar a capacidade da aplicação em tempo real:
 ```bash
    docker service scale meu-servico-web=6
    ```
+
+---
+## 🤝 Conecte-se Comigo
+
+<p align="center">
+  <img src="https://github.com/HigorCamposGit.png" width="100px" style="border-radius: 50%;" alt="Foto de Higor de Campos" /><br />
+  <b>Projeto atualizado por:</b> <a href="https://github.com/HigorCamposGit">Higor de Campos</a>
+</p>
+
+---
 ---
 [https://github.com/HigorCamposGit/Definir-Cluster-Swarm-Local-Vagrant](https://github.com/HigorCamposGit/Definir-Cluster-Swarm-Local-Vagrant)).
 
