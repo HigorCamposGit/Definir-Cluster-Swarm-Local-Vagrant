@@ -1,5 +1,9 @@
 # Desafio: Definição de um Cluster Swarm Local com o Vagrant
 
+---
+🔒 Nota de Segurança: Credenciais locais de infraestrutura detectadas automaticamente foram removidas e revogadas por precaução, garantindo a integridade e segurança pública do repositório.Recebi um e-mail: [HigorCamposGit/Definir-Cluster-Swarm-Local-Vagrant] Possible valid secrets detected. Tokem foi removido!!
+---
+
 Repositório estruturado para a automação e provisionamento de um cluster **Docker Swarm** multinó (1 Manager e 3 Workers) utilizando **Vagrant** e **VirtualBox**, garantindo uma arquitetura limpa, padronizada e pronta para ambiente de desenvolvimento. Porjeto realizado para a **Formação Docker Fundamentals**. ( `com a descrição do desafio extra mais abaixo`)
 
 
