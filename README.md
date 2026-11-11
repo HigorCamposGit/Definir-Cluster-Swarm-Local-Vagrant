@@ -1,7 +1,16 @@
 # Desafio: Definição de um Cluster Swarm Local com o Vagrant
 
-Repositório estruturado para a automação e provisionamento de um cluster **Docker Swarm** multinó (1 Manager e 3 Workers) utilizando **Vagrant** e **VirtualBox**, garantindo uma arquitetura limpa, padronizada e pronta para ambiente de desenvolvimento.
+Repositório estruturado para a automação e provisionamento de um cluster **Docker Swarm** multinó (1 Manager e 3 Workers) utilizando **Vagrant** e **VirtualBox**, garantindo uma arquitetura limpa, padronizada e pronta para ambiente de desenvolvimento. Porjeto realizado para a **Formação Docker Fundamentals**.
 
+
+---
+
+## 👨‍🏫 Créditos e Referências
+
+Este projeto foi desenvolvido como parte de um desafio prático da plataforma **DIO (Digital Innovation One)**, sob a orientação e projeto base do professor:
+
+- **Instrutor:** [Denilson Bonatti](https://github.com/denilsonbonatti)
+- **Repositório de Referência:** [denilsonbonatti/docker-projeto2-cluster](https://github.com/denilsonbonatti/docker-projeto2-cluster)
 ---
 
 ## 📐 Arquitetura do Cluster
@@ -35,13 +44,14 @@ A infraestrutura é composta por quatro instâncias baseadas na imagem Ubuntu 22
    ```
 
    ---
-  Para acessar o nó gerenciador e interagir com o cluster:
+ 1. Para acessar o nó gerenciador e interagir com o cluster:
    ```bash
    vagrant ssh marter
    ```
   
  ---
- 📊 Validação e Resultados Esperados
+ 
+2. 📊 Validação e Resultados Esperados
 Após o provisionamento completo, ao acessar a máquina master e listar os nós do cluster:
 ```bash
    sudo docker node ls
@@ -56,7 +66,7 @@ y3z4a5b6c7d8e9f0g1h2i3j4k     node02     Ready     Active                       
 k9j8i7h6g5f4e3d2c1b0a9z8y     node03     Ready     Active                          24.0.5
 
 ---
-🧪 Validação Avançada: Containers, Serviços e Persistência de Dados (Desafio Extra)
+🧪 Validação Avançada: Containers, Serviços e Persistência de Dados ** (Desafio Extra) **
 Seção dedicada a atender aos testes práticos de orquestração de cargas de trabalho, criação de serviços distribuídos, volumes e manipulação de arquivos no cluster Swarm.
 
 Para validar a execução de aplicações e persistência diretamente pelo nó master, utilize os comandos abaixo:
@@ -69,13 +79,16 @@ Implantação de um serviço web distribuído automaticamente entre os nós do c
    ```
 
 ---
+
 2. Verificar a Distribuição dos Containers:
    ```bash
    docker service ps meu-servico-web
    ```
+---
 3. Teste de Volumes e Criação de Arquivos Persistentes
 Criação de um volume nomeado no cluster para armazenamento e gravação de arquivos de teste dentro de um container em execução:
-# Criar o volume gerenciado
+
+* Criar o volume gerenciado*
 docker volume create dados_compartilhados
 
 * Subir um container utilizando o volume criado *
@@ -84,7 +97,7 @@ docker service create \
   --mount type=volume,src=dados_compartilhados,dst=/app/data \
   alpine tail -f /dev/null
 
-# Criar e injetar um arquivo de teste dentro do container ativo
+* Criar e injetar um arquivo de teste dentro do container ativo *
 docker exec -it $(docker ps -q -f name=app-storage) sh -c "echo 'Arquivo de teste criado com sucesso no Swarm' > /app/data/teste.txt"
 
 ---
