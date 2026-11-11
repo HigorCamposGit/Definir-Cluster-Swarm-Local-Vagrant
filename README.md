@@ -1,6 +1,6 @@
 # Desafio: Definição de um Cluster Swarm Local com o Vagrant
 
-Repositório estruturado para a automação e provisionamento de um cluster **Docker Swarm** multinó (1 Manager e 3 Workers) utilizando **Vagrant** e **VirtualBox**, garantindo uma arquitetura limpa, padronizada e pronta para ambiente de desenvolvimento. Porjeto realizado para a **Formação Docker Fundamentals**.
+Repositório estruturado para a automação e provisionamento de um cluster **Docker Swarm** multinó (1 Manager e 3 Workers) utilizando **Vagrant** e **VirtualBox**, garantindo uma arquitetura limpa, padronizada e pronta para ambiente de desenvolvimento. Porjeto realizado para a **Formação Docker Fundamentals**. ( `com a descrição do desafio extra mais abaixo`)
 
 
 ---
